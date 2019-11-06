@@ -8,7 +8,7 @@ int main()
 	int const k = 6;
 	int a[k];
 
-	printf("Vvedite massiv");
+	printf("Vvedite massiv\n");
 	for (i = 0; i < k; i++)
 	{
 		scanf_s("%d", &a[i]);
