@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+	int i, b;
+	int const k = 6;
+	int a[k];
+
+	printf("Vvedite massiv");
+	for (i = 0; i < k; i++)
+	{
+		scanf_s("%d", &a[i]);
+	}
+
+	for (i = 0; i < k;)
+	{
+		if (i == 0 || a[i] >= a[i - 1])
+		{
+			i++;
+		}
+		else
+		{
+			b = a[i];
+			a[i] = a[i - 1];
+			a[i - 1] = b;
+			i--;
+		}
+	}
+
+	for (i = 0; i < k; i++)
+	{
+		printf("%d ", a[i]);
+	}
+
+	return 0;
+
+}
